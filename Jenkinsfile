@@ -17,10 +17,10 @@ pipeline {
                             git pull
                             
                             # 3. Builder l'image de l'application
-                            docker-compose build app
+                            docker compose build app
                             
                             # 4. Démarrer/Mettre à jour la stack
-                            docker-compose up -d
+                            docker compose up -d
                             
                             echo "🚀 Déploiement sur Azure terminé !"
                         "
