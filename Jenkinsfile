@@ -6,12 +6,12 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no -i ../Docker/1337.pem Kiro@172.161.81.1 "
+                        ssh -o StrictHostKeyChecking=no Kiro@172.161.81.1 "
                             echo "✅ Connecté au serveur Azure..."
                             
                             # 1. Naviguer vers le répertoire du projet
                             # Le chemin peut changer selon votre utilisateur
-                            cd /home/azureuser/CRUD-PostgreSQL-Todo-List
+                            cd to-do-list-docker
                             
                             # 2. Récupérer le code le plus récent de GitHub
                             git pull
